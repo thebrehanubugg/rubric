@@ -1,0 +1,21 @@
+<table class="border-2 border-solid border-black">
+        <tr>
+            <th class="px-4 py-2 border-2 border-solid border-gray-200">Teacher</th>
+            <th class="px-4 py-2 border-2 border-solid border-gray-200">Level 1</th>
+            <th class="px-4 py-2 border-2 border-solid border-gray-200">Level 2</th>
+            <th class="px-4 py-2 border-2 border-solid border-gray-200">Level 3</th>
+            <th class="px-4 py-2 border-2 border-solid border-gray-200">Level 4</th>
+        </tr>
+
+    {{#each data}}
+        <tr>
+            <td class="px-4 py-2 border-2 border-solid border-gray-200">{{this.key}}</td>
+            <td class="px-4 py-2 border-2 border-solid border-gray-200">{{this.listening}}</td>
+            <td class="px-4 py-2 border-2 border-solid border-gray-200">{{this.difficult_conversations}}</td>
+            <td class="px-4 py-2 border-2 border-solid border-gray-200">{{this.opting_in}}</td>
+            <td class="px-4 py-2 border-2 border-solid border-gray-200">{{this.bias_and_privilege}}</td>
+        </tr>
+    {{/each}}
+</table>
+
+<a class="block mt-4 px-4 py-2 bg-red-400 text-white font-bold w-40 text-center" href="/clear">Clear Database</a>

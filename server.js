@@ -43,12 +43,13 @@ app.post("/rubric/evaluate", (request, response) => {
         .catch(err => console.error(err));
 });
 app.get("/analysis", (request, response) => {
-    // response.render("index", {
-    //     "title": "Rubric"
-    // });
+
     rubrics.fetch().next()
     	.then(data => {
-    		response.json(data)
+            response.render("analysis", {
+                "title": "Analysis",
+                "data": data.value
+            });
     	})
     	.catch(err => console.error(err));
 });
