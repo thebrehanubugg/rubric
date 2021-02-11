@@ -1,0 +1,100 @@
+{{!-- <form action="/rubric/new" method="POST" id="newRubric">
+    <label class="block text-sm font-medium text-gray-700" for="name"><span class="text-red-500 font-bold">*</span> Rubric Name</label>
+    <input class="border-2 border-solid border-gray-300 px-4 py-2 rounded-lg outline-none focus:border-black" type="text" type="text" name="name" id="name" placeholder="ex. Research Paper" value="American Studies Research Paper" required />
+</form>
+
+<script src="/form.js"></script> --}}
+
+<form action="/rubric/evaluate" method="POST">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Level 1</th>
+                <th>Level 2</th>
+                <th>Level 3</th>
+                <th>Level 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Listening</td>
+                <td>
+                    I can listen to a student when they are in distress.
+                    <input type="checkbox" name="listening" value="1">
+                </td>
+                <td>
+                    I can listen to a student when they are in distress and try to support them by helping them problem-solve that particular incident.
+                    <input type="checkbox" name="listening" value="2">
+                </td>
+                <td>
+                    I can see patterns that lead to student distress and start to think of solutions to those issues.
+                    <input type="checkbox" name="listening" value="3">
+                </td>
+                <td>
+                    I can bring up these patterns and issues to my team, department, and administration and start to organize changes that help to remedy systematic issues that cause student distress.
+                    <input type="checkbox" name="listening" value="4">
+                </td>
+            </tr>
+            <tr>
+                <td>Difficult Conversations</td>
+                <td>
+                    I am open to a conversation about DEIB topics, if a student or adult brings them up.
+                    <input type="checkbox" name="dc" value="1">
+                </td>
+                <td>
+                    I am open to a conversation about DEIB topics and ask questions about how to improve my work with my community.
+                    <input type="checkbox" name="dc" value="2">
+                </td>
+                <td>
+                    I willingly take risks in my classroom to improve my work in DEIB, being open to mistakes.
+                    <input type="checkbox" name="dc" value="3">
+                </td>
+                <td>
+                     willingly take risks in my community to improve my work in DEIB and am willing to make public mistakes.
+                     <input type="checkbox" name="dc" value="4">
+                </td>
+            </tr>
+            <tr>
+                <td>Opting In</td>
+                <td>
+                    I can opt-in to a situation when I see something with my own eyes.
+                    <input type="checkbox" name="oi" value="1">
+                </td>
+                <td>
+                    I can opt-in to any situation, ask clarifying questions, and help a student feel heard in that moment.
+                    <input type="checkbox" name="oi" value="2">
+                </td>
+                <td>
+                    I can opt-in to helping my community with DEIB issues if it feels like a good safe time to bring up an issue.
+                    <input type="checkbox" name="oi" value="3">
+                </td>
+                <td>
+                    I can opt-in every time for issues in DEIB, even when it feels hard, scary, or unsafe.  After all, think about how my students feel.
+                    <input type="checkbox" name="oi" value="4">
+                </td>
+            </tr>
+            <tr>
+                <td>Bias &amp; Privilege</td>
+                <td>
+                    I can treat everyone in school as if they are equal with equal experiences.
+                    <input type="checkbox" name="bp" value="1">
+                </td>
+                <td>
+                    I can begin to understand my own bias and privilege and what my particular lens brings to my teaching.
+                    <input type="checkbox" name="bp" value="2">
+                </td>
+                <td>
+                    I can recognize and openly name my bias and privilege and adjust my teaching and practice accordingly.
+                    <input type="checkbox" name="bp" value="3">
+                </td>
+                <td>
+                    I am willing to recognize privilege and power as it exists in myself and my community.  I work to dismantle systemic racism.
+                    <input type="checkbox" name="bp" value="4">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="submit" value="Submit Evaluation">
+</form>
