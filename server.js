@@ -31,6 +31,7 @@ app.get("/", (request, response) => {
 
 app.post("/rubric/evaluate", (request, response) => {
     response.json(request.body);
+    rubrics.insert(request.body);
 });
 
 // start server
