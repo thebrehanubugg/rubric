@@ -42,6 +42,16 @@ app.post("/rubric/evaluate", (request, response) => {
         .then(() => response.redirect("/"))
         .catch(err => console.error(err));
 });
+app.get("/analysis", (request, response) => {
+    // response.render("index", {
+    //     "title": "Rubric"
+    // });
+    rubrics.fetch().next()
+    	.then(data => {
+    		response.json(data)
+    	})
+    	.catch(err => console.error(err));
+});
 
 // start server
 app.listen(8080);
