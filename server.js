@@ -31,7 +31,16 @@ app.get("/", (request, response) => {
 
 app.post("/rubric/evaluate", (request, response) => {
     response.json(request.body);
-    rubrics.insert(request.body);
+    let { listening, dc, oi, bp } = request.body;
+
+    rubrics.insert({
+        "listening": listening,
+        "difficult_conversations": dc,
+        "opting_in": oi,
+        "bias_and_privilege": bp
+    }, request.body.teachers_name)
+        .then(() => response.redirect("/"))
+        .catch(err => console.error(err));
 });
 
 // start server
